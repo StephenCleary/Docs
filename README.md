@@ -2,3 +2,7 @@
 
 # Docs
 Documentation of various and sundry matters
+
+Table of Contents:
+
+- [Writing Open-Source C# Libraries](libraries/README.md)
