@@ -57,7 +57,7 @@ When building in a CI environment, enable repeatable builds:
 Use [semantic versioning](https://semver.org/) and derive your version from tags pushed to the repository. If you are hosting on GitHub, you can set up your version to a specific value when building locally, and when GitHub Actions builds your project, pull your `Version` property from a tag starting with `v` as such:
 
 ```xml
-<PropertyGroup>
+<PropertyGroup Condition="'$(DevVersion)'==''">
   <DevVersion>1.0.0</DevVersion>
 </PropertyGroup>
 <PropertyGroup Condition="'$(GITHUB_REF)'=='' or !$(GITHUB_REF.StartsWith('refs/tags/v'))">
